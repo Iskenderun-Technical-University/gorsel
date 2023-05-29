@@ -47,6 +47,7 @@
             label5 = new Label();
             textBox5 = new TextBox();
             button3 = new Button();
+            button4 = new Button();
             SuspendLayout();
             // 
             // listView1
@@ -206,11 +207,24 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // button4
+            // 
+            button4.BackColor = Color.Chocolate;
+            button4.Font = new Font("Arial", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            button4.Location = new Point(147, 283);
+            button4.Name = "button4";
+            button4.Size = new Size(120, 53);
+            button4.TabIndex = 14;
+            button4.Text = "GÜNCELLE";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(717, 450);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(label5);
             Controls.Add(textBox5);
@@ -252,5 +266,6 @@
         private Label label5;
         private TextBox textBox5;
         private Button button3;
+        private Button button4;
     }
 }

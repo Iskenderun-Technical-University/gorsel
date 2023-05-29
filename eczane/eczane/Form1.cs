@@ -70,9 +70,9 @@ namespace eczane
         private void button3_Click(object sender, EventArgs e)
         {
             baglan.Open();
-            SqlCommand kayýtsil =new SqlCommand("Delete from ilac where id=@id",baglan);
+            SqlCommand kayýtsil = new SqlCommand("Delete from ilac where id=@id", baglan);
 
-            kayýtsil.Parameters.AddWithValue("@id",textBox1.Text);
+            kayýtsil.Parameters.AddWithValue("@id", textBox1.Text);
             kayýtsil.ExecuteNonQuery();
             baglan.Close();
             verilerigoruntule();
@@ -87,6 +87,16 @@ namespace eczane
             textBox3.Text = listView1.SelectedItems[0].SubItems[2].Text;
             textBox4.Text = listView1.SelectedItems[0].SubItems[3].Text;
             textBox5.Text = listView1.SelectedItems[0].SubItems[4].Text;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            baglan.Open();
+            SqlCommand komut = new SqlCommand("update ilac set id='" + textBox1.Text.ToString() + "',ilacad='" + textBox2.Text.ToString() + "',ilacsirketi='" + textBox3.Text.ToString() + "',ilacturu='" + textBox4.Text.ToString() + "',ilackutuadedi='" + textBox5.Text.ToString() + "'where id =" + id + "", baglan);
+            komut.ExecuteNonQuery();
+            baglan.Close();
+            verilerigoruntule();
         }
     }
 }
